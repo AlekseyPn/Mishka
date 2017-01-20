@@ -110,8 +110,8 @@ gulp.task("build", function(fn) {
         "copy",
         "style",
         "images",
-        "symbols",
         "svg-min",
+        "symbols",
         "clean-icons-folder",
         "uglifyjs",
         fn
