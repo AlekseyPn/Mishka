@@ -1,0 +1,37 @@
+.container() {
+  width: 320px;
+  margin: 0 auto;
+
+  @media @tablet-widths {
+    width: 768px;
+  }
+  @media @desktop-widths {
+    width: 1150px;
+  }
+}
+// ===========Для резины=============
+// .container-fluid() {
+//   width: auto;
+
+//   @media @tablet-widths {
+//     width: 87%;
+//     max-width: 1150px;
+//     margin: 0 auto;
+//   }
+// } 
+
+.clearfix() {
+  &::after {
+  content: "";
+    
+  display: table;
+  clear: both;
+  }
+}
+
+.form-check {
+  position: relative;
+  display: block;
+  padding: 14px 0;
+  padding-left: 64px;  
+}

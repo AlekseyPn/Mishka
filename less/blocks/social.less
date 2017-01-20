@@ -1,0 +1,44 @@
+    .social {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: baseline;
+        padding: 0 42px 25px;
+        font-size: 0;
+        text-align: center;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    
+    .social__link {
+        display: block;
+        width: 30px;
+        height: 30px;
+        font-size: 0;
+    }
+    
+    .social__link-icon {
+        fill: #231F20;
+        transition: all 0.2s ease-out;
+        &:hover {
+            fill: @second-theme-color;
+        }
+        &:active {
+            opacity: 0.3;
+        }
+    }
+    
+    @media @tablet-widths {
+        .social {
+            justify-content: center;
+            width: 150px;
+            padding: 0;
+            margin-left: 73px;
+            border: none;
+        }
+        .social__item {
+            margin-right: 29px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }

@@ -1,0 +1,375 @@
+.order-form {
+    padding: 0 30px 55px;
+}
+
+.order-form__input {
+    display: none;
+}
+
+.order-form__input[type=radio]:checked+.order-form__label-radio::before {
+    background-color: @theme-color;
+    background-clip: content-box;
+}
+
+.order-form__input[type=checkbox]:checked+.order-form__checkbox-label::before {
+    background-image: url(../img/icon-tick.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 22px 16px;
+}
+
+.order-form__wrapper {
+    margin-bottom: 25px;
+    padding-top: 22px;
+    border: none;
+    border-top: 1px solid @theme-color;
+    &--color {
+        margin-bottom: 12px;
+    }
+    &--name {
+        margin-bottom: 13px;
+        padding-top: 35px;
+    }
+    &--tel {
+        margin-bottom: 16px;
+        padding-top: 9px;
+    }
+    &--email {
+        margin-bottom: 11px;
+        padding-top: 10px;
+    }
+    &--add {
+        margin-bottom: 13px;
+        padding-top: 32px;
+    }
+}
+
+.order-form__inner-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    &--tel,
+    &--email {
+        position: relative;
+    }
+}
+
+.order-form__title {
+    padding-right: 27px;
+    line-height: 16px;
+    color: @theme-color;
+    text-transform: uppercase;
+}
+
+.order-form__checkbox-label {
+    margin-bottom: 15px;
+    .form-check;
+    line-height: 18px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 39px;
+        border: 2px solid @grey-color;
+    }
+    &:hover::before {
+        border-color: @theme-color;
+    }
+    &:active::before {
+        border-color: @grey-color;
+        opacity: 0.3;
+    }
+}
+
+.order-form__label-radio {
+    .form-check;
+    line-height: 18px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 39px;
+        height: 39px;
+        padding: 10px;
+        border: 2px solid @grey-color;
+        border-radius: 50%;
+    }
+    &:hover::before {
+        border-color: @theme-color;
+    }
+    &:active::before {
+        border-color: @grey-color;
+        opacity: 0.3;
+    }
+}
+
+.order-form__name-label {
+    line-height: 18px;
+}
+
+.order-form__text-input {
+    width: 100%;
+    margin-bottom: 23px;
+    padding: 13px 0 17px;
+    line-height: 18px;
+    font-weight: @normal-weight;
+    border: none;
+    border-bottom: 2px solid ;
+    outline: none;
+    &:focus,
+    &:hover {
+        border-color: @theme-color;
+    }    
+    &--error {
+        border-color: @error;
+    }
+}
+
+.order-form__input-label {
+    position: relative;
+    &--tel {
+        position: absolute;
+        top: 6px;
+        right: 7px;
+        width: 25px;
+        height: 25px;        
+        opacity: 0.2;
+    }
+    &--email {
+        position: absolute;
+        top: 14px;
+        right: 4px;
+        width: 32px;
+        height: 21px;        
+        opacity: 0.2;
+    }
+}
+
+.order-form__text-input--tel:hover + .order-form__input-label--tel,
+.order-form__text-input--tel:focus + .order-form__input-label--tel,
+.order-form__text-input--email:hover + .order-form__input-label--email,
+.order-form__text-input--email:focus + .order-form__input-label--email {
+    fill: @theme-color;
+    opacity: 1;
+}
+
+
+
+.order-form__textarea {
+    width: 100%;
+    padding: 14px 17px;
+    line-height: 18px;
+    font-weight: @normal-weight;
+    border: 2px solid ;
+    outline: none;
+    &:hover,
+    &:focus,
+    &:valid {
+        border-color: @theme-color;
+    }
+    &--error {
+        border-color: @error;
+    }
+}
+
+.order-form__attention {
+    margin-bottom: 28px;
+    font-size: @small-text;
+    line-height: 8px;
+    font-weight: @normal-weight;
+}
+
+.order-form__button {
+    width: 100%;
+}
+
+@media @tablet-widths {
+    .order-form {
+        padding: 0;
+        padding-bottom: 50px;
+        .clearfix;
+    }
+    .order-form__wrapper {
+        padding-left: 50px;
+        padding-right: 50px;
+        border: none;
+        &--bg-grey {
+            background: @grey-bg;
+        }
+        &--type {
+            padding-top: 22px;
+        }
+        &--color {
+            padding-top: 55px;
+        }
+        &--name {
+            padding-top: 31px;
+            padding-bottom: 33px;
+        }
+        &--tel {
+            margin: 0;
+            padding-top: 45px;
+        }
+        &--email {
+            padding-top: 12px;
+            padding-bottom: 65px;
+        }
+        &--add {
+            padding-top: 45px;
+        }
+    }
+    .order-form__title {
+        float: left;
+        width: 166px;
+        margin-top: 20px;
+    }
+    .order-form__inner-wrapper {
+        float: left;
+        margin-top: 10px;
+        &--color {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 465px;
+            padding-bottom: 35px;
+            margin-top: 7px;
+        }
+        &--name {
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: baseline;
+            width: 500px;
+            margin-top: 6px;
+        }
+        &--tel,
+        &--email {
+            flex-direction: row;
+            margin-top: 5px;
+            width: 500px;
+        }
+        
+    }
+    .order-form__label-radio {
+        margin-bottom: 30px;
+        padding-left: 79px;
+        font-size: 19px;
+        &::before {
+            width: 52px;
+            height: 52px;
+            padding: 14px;
+        }
+    }
+    .order-form__checkbox-label {
+        width: 200px;
+        margin-bottom: 30px;
+        font-size: 19px;
+        padding-left: 82px;
+        &::before {
+            width: 54px;
+            height: 52px;
+        }
+    }
+    .order-form__input[type=checkbox]+.order-form__checkbox-label::before {
+        background-image: url(../img/icon-tick.svg);
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: 33px 22px;
+    }
+    .order-form__name-label {
+        font-size: 19px;
+    }
+    .order-form__input-label {
+        &--tel {
+            top: 20px;
+            right: 58px;
+        }
+        &--email {
+            top: 15px;
+            right: 61px;
+        }
+        &--textarea {
+            float: left;
+            width: 500px;
+            padding-top: 7px;
+        }
+    }
+    .order-form__text-input {  
+        flex-basis: 350px;      
+        flex-grow: 1;
+        margin-left: 41px;
+        margin-bottom: 18px;
+        font-size: 19px;
+        &--tel,
+        &--email {
+            margin-top: 5px;
+            margin-bottom: 0;
+            margin-left: 0;
+            padding-left: 15px;
+            background-color: transparent;
+        }
+        &--email {
+            margin-top: 0;
+        }        
+    }
+    .order-form__textarea {
+        font-size: 19px;
+        line-height: 18px;
+    }
+    .order-form__attention {
+        float: right;
+        margin-top: 43px;
+        margin-bottom: 0;
+        margin-right: 50px;
+        font-size: @text-size;
+        line-height: 30px;
+    }
+    .order-form__button {
+        float: left;
+        width: 230px;
+        margin-top: 35px;
+        margin-left: 50px;
+    }
+}
+
+@media @desktop-widths {
+    .order-form {
+        padding-bottom: 95px;
+    }
+    .order-form__title {
+        margin-right: 8px;
+        padding-top: 5px;
+        padding-left: 25px;
+        text-align: center;
+    }
+    .order-form__wrapper {
+        &--type {
+            margin-bottom: 28px;
+        }
+        &--color {
+            padding-top: 48px;
+        }
+    }
+    .order-form__inner-wrapper {
+        width: 750px;
+        &--color {
+            width: 725px;
+            margin-top: 14px;
+        }
+    }
+    .order-form__text-input {
+        flex-basis: 565px;
+    }    
+    .order-form__attention {
+        margin-top: 82px;
+        margin-right: 224px;
+    }
+    .order-form__button {
+        margin-top: 73px;
+        margin-left: 224px;
+    }
+
+    .order-form__input-label--textarea {
+        width: 700px;
+    }
+}
