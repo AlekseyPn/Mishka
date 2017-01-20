@@ -270,10 +270,7 @@
             height: 52px;
         }
     }
-    .order-form__input[type=checkbox]+.order-form__checkbox-label::before {
-        background-image: url(../img/icon-tick.svg);
-        background-repeat: no-repeat;
-        background-position: 50%;
+    .order-form__input[type=checkbox]:checked+.order-form__checkbox-label::before {        
         background-size: 33px 22px;
     }
     .order-form__name-label {
