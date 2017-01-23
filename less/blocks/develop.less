@@ -1,0 +1,44 @@
+.develop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 13px;
+    font-size: 19px;
+    line-height: 18px;
+    text-align: center;
+    &:active {
+        opacity: 0.3;
+    }
+}
+
+.develop:hover .develop__ico {
+    opacity: 1;
+}
+
+.develop__text {
+    padding-top: 6px;
+}
+
+.develop__icon {    
+    margin-left: 23px;
+    font-size: 0;
+    opacity: 0.8;    
+}
+
+@media @tablet-widths {
+    .develop {
+        width: 185px;
+        margin-top: 0;
+        padding-top: 10px;
+        justify-content: space-between;
+    }
+    .develop__icon {
+        width: 29px;
+    }
+}
+
+@media @desktop-widths {
+    .develop__icon {
+        margin-left: 23px;
+    }
+}

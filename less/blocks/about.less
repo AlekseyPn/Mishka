@@ -1,0 +1,120 @@
+.about {
+    background-image: url(../img/bg-zigzag-line.svg);
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    background-size: auto 7px;
+}
+
+.about__wrapper {
+    padding: 30px 30px 0;
+}
+
+.about__title {
+    margin-bottom: 30px;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.about__item {
+    position: relative;
+    padding: 55px 0 27px;
+    line-height: 21px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 40px;
+        background-position: 50%;
+        background-repeat: no-repeat;        
+    }
+    &--icon-eco::before {
+        background-image: url(../img/icon-feature-1.svg);
+    }
+
+    &--icon-money::before {
+        height: 35px;
+        background-image: url(../img/icon-feature-3.svg);
+    }
+    &--icon-heart::before {
+        background-image: url(../img/icon-feature-5.svg);
+    }
+    &--icon-ball::before {
+        width: 42px;
+        background-image: url(../img/icon-feature-2.svg);
+    }
+    &--icon-rocket::before {
+        left: -6px;
+        width: 55px;
+        height: 30px;
+        background-image: url(../img/icon-feature-4.svg);
+    }
+    &--icon-gift::before {
+        width: 45px;
+        height: 32px;
+        background-image: url(../img/icon-feature-6.svg);
+    }
+}
+
+@media @tablet-widths {
+    .about {
+        background-size: auto 17px;
+    }
+
+    .about__wrapper {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .about__title {
+        margin-top: 36px;
+        margin-bottom: 47px;
+        font-size: @middle-head-text;
+        line-height: 50px;
+    }
+    .about__list {
+        column-count: 2;
+        column-width: 330px;
+        column-gap: 0px;
+    }
+    .about__item {
+        display: inline-table;
+        width: 330px;
+        padding: 60px 0 53px;
+        font-size: @text-size+3px;
+        &:nth-child(n+4) {
+            &::before {
+                top: 4px;
+                left: 0;
+            }
+        }
+    }
+    .about__reviews {
+        margin-top: 30px;
+    }
+}
+
+@media @desktop-widths {
+    .about {
+        padding: 0 50px;
+        background-size: auto 23px;
+    }
+    .about__wrapper {        
+        padding-left: 175px;
+    }
+    .about__title {
+        margin-top: 54px;
+        font-size: @large-head-text;
+        line-height: 57px;
+    }
+    .about__list {
+        width: 700px;
+    }
+    .about__item {
+        padding-top: 59px;
+    }
+    .about__reviews {
+        margin-top: 39px;
+    }
+}

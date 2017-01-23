@@ -1,0 +1,72 @@
+.page-body {
+    position: relative;
+    font-size: @text-size;
+    line-height: 24px;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-weight: @bold-weight;
+    color: ;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {    
+    color: @black-color;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+    max-width: 100%;
+    height: auto;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden {
+    display: none;
+}
+
+.icon {
+    fill: #231F20;
+    transition: all 0.2s ease-out;
+    &:hover {
+        fill: @second-theme-color;
+    }
+    &:active {
+        opacity: 0.3;
+    }
+    &--menu {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 18px;
+        height: 19px;
+        opacity: 0.2;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &--catalog {
+        width: 21px;
+        height: 22px;
+        font-size: 0;
+        opacity: 0.2;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

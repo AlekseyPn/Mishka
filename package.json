@@ -1,0 +1,51 @@
+{
+  "name": "Mishka",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Проект «Мишка» от HTML Academy",
+  "author": "Alexey Peresmekhin",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:AlekseyPn/alekseypn.github.io"
+  },
+  "bugs": {
+    "url": "https://github.com/AlekseyPn/alekseypn.github.io/issues"
+  },
+  "homepage": "https://github.com/AlekseyPn/alekseypn.github.io",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "0.0.7",
+    "autoprefixer": "6.4.1",
+    "browser-sync": "2.15.0",
+    "css-mqpacker": "^5.0.1",
+    "del": "^2.2.2",
+    "gulp": "3.9.1",
+    "gulp-csso": "^2.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-less": "3.1.0",
+    "gulp-plumber": "1.1.0",
+    "gulp-postcss": "6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-uglify": "^2.0.0",
+    "i": "^0.3.5",
+    "pixel-glass": "^1.0.10",
+    "run-sequence": "^1.2.2"
+  },
+  "scripts": {
+    "test": "editorconfig-cli",
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
+  },
+  "editorconfig-cli": [
+    "*.html",
+    "*.json",
+    "*.js",
+    "js/**/*.js",
+    "img/**/*.svg",
+    "less/**/*.less"
+  ],
+  "engines": {
+    "node": "6.5"
+  }
+}

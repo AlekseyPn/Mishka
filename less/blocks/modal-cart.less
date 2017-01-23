@@ -1,0 +1,112 @@
+.modal-cart {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  display: none;
+  width: 320px;
+  margin-left: -160px;
+  padding: 35px 30px 40px;
+  font-size: 0;
+  text-align: center;
+  z-index: 20;
+  background-color: @white-color;
+  border: 1px solid @modal-border-color;
+  box-shadow: 0 5px 10px fade(@modal-shadow, 25%);
+  &--show {
+    display: block;
+  }
+}
+
+.modal-cart__input {
+  display: none;
+}
+
+.modal-cart__title {
+  margin-bottom: 15px;
+  padding: 0 50px;
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.modal-cart__text {
+  margin-bottom: 25px;
+  font-size: @middle-text;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.modal-cart__size-btn {
+  display: inline-block;
+  vertical-align: top;
+  width: 82px;
+  margin-right: 5px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: @text-size;
+  line-height: 16px;
+  text-align: center;
+  color: @grey-color;
+  background-color: transparent;
+  border: 2px solid fade(@grey-color, 10%);
+  outline: none;
+  box-sizing: border-box;
+  cursor: pointer;  
+  &:hover {
+    border-color: fade(@grey-color, 30%);
+  }
+}
+
+.modal-cart__input:checked + .modal-cart__size-btn {
+  border-color: @theme-color;
+}
+
+.modal-cart__size-btn:nth-of-type(3) {
+  margin-right: 0px;
+}
+
+.modal-cart__submit {
+  display: block;
+  margin-top: 30px;
+  width: 100%;
+  padding-top: 18px;
+  padding-bottom: 16px;
+  font-size: @text-size;
+  line-height: 16px;
+  color: @white-color;
+  text-transform: uppercase;
+  background-color: @theme-color;  
+  border: none;
+  outline: none;
+  transition: all 0.2s ease-out;
+  &:hover {
+    background-color: darken(@theme-color, 10%);
+  }
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+@media @tablet-widths {
+  .modal-cart {
+    top: 41%;
+    width: 568px;
+    margin-left: -284px;
+    padding-left: 109px;
+    padding-right: 109px;
+  }
+
+  .modal-cart__title {
+    padding: 0;
+  }
+
+  .modal-cart__size-btn {
+    width: 112px;
+  }
+}
+
+@media @desktop-widths {
+  .modal-cart {
+    top: 31%;
+  }
+}
