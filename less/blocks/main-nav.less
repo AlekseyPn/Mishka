@@ -38,7 +38,7 @@
     cursor: pointer;
 }
 
-.main-nav__items {
+.main-nav__list {
     display: block;
     font-size: @text-size;
     &--closed {
@@ -46,50 +46,28 @@
     }
 }
 
-.main-nav__item {
+.main-nav__item,
+.main-nav__user-item {
     position: relative;
     border-bottom: 1px solid @border-color;
 }
 
 .main-nav__link {
+    display: block;
     padding: 27px 30px;
     padding-left: 65px;
     &:hover {
-        opacity: 0.6;        
+        opacity: 0.6;
     }
     &:active {
         opacity: 0.3;
-    }    
+    }
 }
 
 .main-nav__user-link {
+    display: block;
     padding: 32px 30px 33px;
     padding-left: 65px;
-}
-
-.main-nav__icon-search,
-.main-nav__icon-cart {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    width: 18px;
-    height: 19px;
-    opacity: 0.2;
-    transition: all 0.2s ease-out;
-    &:hover {
-        fill: @theme-color;
-        opacity: 1;
-    }
-
-    &:active {
-        opacity: 0.3;
-    }    
-    
-}
-
-.main-nav__icon-cart {    
-    width: 21px;
-    height: 21px;     
 }
 
 .main-nav__sales {
@@ -122,7 +100,7 @@
         padding: 0;
         text-align: left;
     }
-    .main-nav__items {
+    .main-nav__list {
         position: absolute;
         bottom: -41px;
         left: 13px;
@@ -132,18 +110,18 @@
         }
     }
     .main-nav__item {
-        border: none;
+        border-bottom: none;
         &--menu {
             display: inline-block;
             vertical-align: top;
             font-size: @middle-text;
-            border: none;
         }
-        &--user {
-            display: inline-block;
-            vertical-align: top;
-            font-size: @text-size;
-        }
+    }    
+    .main-nav__user-item {
+        display: inline-block;
+        vertical-align: top;
+        font-size: @text-size;
+        border-bottom: none;
         &--search {
             font-size: 0;
             border: 1px solid @border-color;
@@ -153,25 +131,21 @@
     }
     .main-nav__link {
         padding-top: 30px;
-        padding-bottom: 35px;        
+        padding-bottom: 35px;
     }
-
     .main-nav__user-link {
         &--search {
             padding-right: 20px;
         }
-
         &--basket {
             padding-left: 76px;
             padding-right: 0px;
         }
     }
-
     .main-nav__icon-cart {
         top: 36px;
         left: 27px;
     }
-
     .main-nav__icon-search {
         top: 37px;
         left: 33px;
@@ -198,7 +172,7 @@
     .main-nav__logo {
         width: 150px;
     }
-    .main-nav__items {
+    .main-nav__list {
         position: static;
     }
     .main-nav__item {
@@ -215,9 +189,6 @@
                 }
             }
         }
-        &--basket {
-            padding-right: 0;
-        }
         &--sales {
             display: inline-block;
             vertical-align: top;
@@ -229,7 +200,10 @@
             }
         }
     }
-    .main-nav__user-items {
+    .main-nav__user-item--basket {
+        padding-right: 0;
+    }
+    .main-nav__user-list {
         margin-left: 0;
         order: 3;
     }
@@ -251,34 +225,34 @@
     .main-nav--closed .main-nav__toggle {
         background-image: url(../img/icon-menu-open.svg);
     }
-    .main-nav--closed .main-nav__items,
-    .main-nav--closed .main-nav__user-items {
+    .main-nav--closed .main-nav__list,
+    .main-nav--closed .main-nav__user-list {
         display: none;
     }
-    .main-nav--opened .main-nav__items,
-    .main-nav--opened .main-nav__user-items {
+    .main-nav--opened .main-nav__list,
+    .main-nav--opened .main-nav__user-list {
         display: block;
         background: @white-color;
     }
     .main-nav__wrapper {
         background: @white-color;
     }
-    .main-nav--opened .main-nav__items {
+    .main-nav--opened .main-nav__list {
         position: absolute;
         top: 81px;
         left: 0;
         right: 0;
         z-index: 1;
     }
-    .main-nav--opened .main-nav__user-items {
+    .main-nav--opened .main-nav__user-list {
         position: absolute;
         top: 239px;
         left: 0;
         right: 0;
         z-index: 1;
     }
-    .main-nav--no-js .main-nav__items,
-    .main-nav--no-js .main-nav__user-items {
+    .main-nav--no-js .main-nav__list,
+    .main-nav--no-js .main-nav__user-list {
         position: relative;
         display: block;
     }

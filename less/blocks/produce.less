@@ -11,7 +11,7 @@
     line-height: 24px;
     border: 1px solid @border-color;
     border-bottom: none;
-    &--icon::before {
+    &::before {
         content: "";
         position: absolute;
         top: 35px;
@@ -54,7 +54,6 @@
 
 .produce__preview {
     background-color: @light-grey;
-
 }
 
 .produce__desc {
@@ -97,7 +96,7 @@
     .produce__title {
         padding: 36px 43px 5px 105px;
         font-size: @text-size+3px;
-        &--icon::before {
+        &::before {
             top: 38px;
             left: 41px;
         }
@@ -131,7 +130,7 @@
         padding-left: 79px;
         border-left: none;
         border-top: 1px solid @border-color;
-        &--icon::before {
+        &::before {
             top: 46px;
             left: 80px;
         }

@@ -45,6 +45,7 @@ gulp.task("style", function() {
         .pipe(postcss([
             autoprefixer({
                 browsers: [
+                    ">2%",
                     "last 1 version",
                     "last 2 Chrome versions",
                     "last 2 Firefox versions",
@@ -63,8 +64,20 @@ gulp.task("style", function() {
         .pipe(server.stream());
 });
 
+gulp.task("html-watch", function() {
+    gulp.src("*.html")
+        .pipe(gulp.dest("build"));
+});
+
 gulp.task("uglifyjs", function() {
     gulp.src("build/js/script.js")
+        .pipe(uglify())
+        .pipe(rename("script.min.js"))
+        .pipe(gulp.dest("build/js"))
+});
+
+gulp.task("watch-js", function() {
+    gulp.src("js/script.js")
         .pipe(uglify())
         .pipe(rename("script.min.js"))
         .pipe(gulp.dest("build/js"))
@@ -101,7 +114,8 @@ gulp.task("serve", function() {
     });
 
     gulp.watch("less/**/*.less", ["style"]);
-    gulp.watch("*.html").on("change", server.reload);
+    gulp.watch("js/**/*.js", ["watch-js"]);
+    gulp.watch("*.html", ["html-watch"]).on("change", server.reload);
 });
 
 gulp.task("build", function(fn) {
